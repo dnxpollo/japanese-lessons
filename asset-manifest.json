@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/japanese-lessons/static/css/main.f61897e1.css",
+    "main.js": "/japanese-lessons/static/js/main.9e019eef.js",
+    "static/js/453.a367d966.chunk.js": "/japanese-lessons/static/js/453.a367d966.chunk.js",
+    "index.html": "/japanese-lessons/index.html",
+    "main.f61897e1.css.map": "/japanese-lessons/static/css/main.f61897e1.css.map",
+    "main.9e019eef.js.map": "/japanese-lessons/static/js/main.9e019eef.js.map",
+    "453.a367d966.chunk.js.map": "/japanese-lessons/static/js/453.a367d966.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f61897e1.css",
+    "static/js/main.9e019eef.js"
+  ]
+}
