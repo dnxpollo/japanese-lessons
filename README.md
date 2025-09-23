@@ -17,7 +17,7 @@ Plataforma interativa para aprender japonês do cotidiano, desenvolvida com **Re
 
 - React
 - TypeScript
-- CSS (ou Tailwind, se estiver usando)
+- CSS 
 - Git + GitHub
 
 ## 🚀 Como rodar localmente
