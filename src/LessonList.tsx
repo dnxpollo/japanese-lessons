@@ -1,33 +1,40 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import LessonCard from './LessonCard';
 
-function LessonList() {
-  const lessonContent = {
-    Hiragana: {
-      title: 'Hiragana',
-      description: 'O alfabeto fonético básico do japonês.',
-      examples: ['あ (a)', 'い (i)', 'う (u)', 'え (e)', 'お (o)'],
-      phrases: ['あい (ai) - amor', 'うえ (ue) - cima'],
-    },
-    Katakana: {
-      title: 'Katakana',
-      description: 'Usado para palavras estrangeiras e nomes científicos.',
-      examples: ['ア (a)', 'イ (i)', 'ウ (u)', 'エ (e)', 'オ (o)'],
-      phrases: ['アイス (aisu) - sorvete', 'ホテル (hoteru) - hotel'],
-    },
-    Kanji: {
-      title: 'Kanji',
-      description: 'Ideogramas com significados complexos.',
-      examples: ['日 - sol', '月 - lua', '山 - montanha', '水 - água'],
-      phrases: ['日本 (nihon) - Japão', '山水 (sansui) - paisagem'],
-    }
-  };
+interface Lesson {
+  title: string;
+  description: string;
+  examples: string[];
+  phrases?: string[];
+}
 
-  const [activeLesson, setActiveLesson] = useState(null);
-
-  function handleLessonClick(title) {
-    setActiveLesson(title);
+const lessonContent: Record<string, Lesson> = {
+  Hiragana: {
+    title: 'Hiragana',
+    description: 'O alfabeto fonético básico do japonês.',
+    examples: ['あ (a)', 'い (i)', 'う (u)', 'え (e)', 'お (o)'],
+    phrases: ['あい (ai) - amor', 'うえ (ue) - cima'],
+  },
+  Katakana: {
+    title: 'Katakana',
+    description: 'Usado para palavras estrangeiras e nomes científicos.',
+    examples: ['ア (a)', 'イ (i)', 'ウ (u)', 'エ (e)', 'オ (o)'],
+    phrases: ['アイス (aisu) - sorvete', 'ホテル (hoteru) - hotel'],
+  },
+  Kanji: {
+    title: 'Kanji',
+    description: 'Ideogramas com significados complexos.',
+    examples: ['日 - sol', '月 - lua', '山 - montanha', '水 - água'],
+    phrases: ['日本 (nihon) - Japão', '山水 (sansui) - paisagem'],
   }
+};
+
+const LessonList: React.FC = () => {
+  const [activeLesson, setActiveLesson] = useState<string | null>(null);
+
+  const handleLessonClick = (title: string) => {
+    setActiveLesson(title);
+  };
 
   return (
     <section>
@@ -59,7 +66,7 @@ function LessonList() {
             <>
               <h4 className="mt-4 font-semibold">Frases:</h4>
               <ul className="list-disc ml-6">
-                {lessonContent[activeLesson].phrases.map((phrase, i) => (
+                {lessonContent[activeLesson].phrases!.map((phrase, i) => (
                   <li key={i}>{phrase}</li>
                 ))}
               </ul>
@@ -69,6 +76,6 @@ function LessonList() {
       )}
     </section>
   );
-}
+};
 
 export default LessonList;

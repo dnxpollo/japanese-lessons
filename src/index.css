@@ -56,3 +56,21 @@ nav a {
   border: 1px solid #ddd;
   border-radius: 8px;
 }
+.lesson-list {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente (se houver altura definida) */
+  gap: 2rem;               /* Espaçamento entre os cards */
+  flex-wrap: wrap;         /* Permite que os cards quebrem linha se necessário */
+  padding: 2rem;
+}
+ul, li {
+  list-style-type: none;
+}
+
+li::marker {
+  content: none;
+}
+.App {
+  padding: 2rem;
+}

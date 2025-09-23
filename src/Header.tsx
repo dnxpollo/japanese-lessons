@@ -1,7 +1,9 @@
-function Header() {
+import React from 'react';
+
+const Header: React.FC = () => {
   return (
     <header>
-      <h1>Nihon no Nichijō </h1>
+      <h1>Nihon no Nichijō</h1>
       <nav>
         <a href="#hiragana">Hiragana</a>
         <a href="#katakana">Katakana</a>
@@ -9,6 +11,6 @@ function Header() {
       </nav>
     </header>
   );
-}
+};
 
 export default Header;
