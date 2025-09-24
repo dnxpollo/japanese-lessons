@@ -5,9 +5,8 @@ const Header: React.FC = () => {
     <header>
       <h1>Nihon no Nichijō</h1>
       <nav>
-        <a href="#hiragana">Hiragana</a>
-        <a href="#katakana">Katakana</a>
-        <a href="#kanji">Kanji</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#licoes">Lições</a>
       </nav>
     </header>
   );

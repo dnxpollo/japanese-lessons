@@ -9,7 +9,7 @@ interface QuestionProps {
 
 const Question: React.FC<QuestionProps> = ({ question, options, onAnswer }) => {
   return (
-    <div>
+    <div id='quiz'>
       <h2>{question}</h2>
       {options.map((opt, index) => (
         <button key={index} onClick={() => onAnswer(opt)}>

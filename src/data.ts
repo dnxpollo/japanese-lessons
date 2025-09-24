@@ -8,13 +8,13 @@ export interface QuestionData {
 export const questions: QuestionData[] = [
   {
     question: "Qual a capital do Japão?",
-    options: ["Osaka", "Toyama", "Tokio", "Hiroshima"],
+    options: ["Osaka", "Toyama", "Tokyo", "Hiroshima"],
     answer: "Tokio"
   },
   {
     question: "Como falar 'eu te amo' em japonês?",
-    options: ["Aishteru", "Arigatou", "Ohayo", "Omedeto"],
-    answer: "Aishteru"
+    options: ["Aishiteru", "Arigatou", "Ohayo", "Omedeto"],
+    answer: "Aishiteru"
   },
   {
     question: "Qual componente principal do tofu?",
@@ -31,4 +31,23 @@ export const questions: QuestionData[] = [
     options: ["Naruto", "Dragon Ball", "Pokemon", "One Piece"],
     answer: "Pokemon"
   }
+  ,
+  {
+    question: "Como falar 'obrigado' em japonês?",
+    options: ["Arigato", "Aishiteru", "Onegai", "Baka"],
+    answer: "Arigato"
+  }
+  ,
+  {
+    question: "Qual árvore representa o Japão?",
+    options: ["Laranjeira", "Mangueira", "Cerejeira", "Abacateiro"],
+    answer: "Cerejeira"
+  },
+  {
+    question: "Em qual cidade está localizado o Monte Fuji?",
+    options: ["Yamanashi", "Yamaguchi", "Hokkaidou", "Toyama"],
+    answer: "Yamanashi"
+  }
 ];
+
+

@@ -64,13 +64,3 @@ nav a {
   flex-wrap: wrap;         /* Permite que os cards quebrem linha se necessário */
   padding: 2rem;
 }
-ul, li {
-  list-style-type: none;
-}
-
-li::marker {
-  content: none;
-}
-.App {
-  padding: 2rem;
-}
