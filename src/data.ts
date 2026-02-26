@@ -30,5 +30,15 @@ export const questions: QuestionData[] = [
     question: "Qual anime é considerado o maior anime no Japão?",
     options: ["Naruto", "Dragon Ball", "Pokemon", "One Piece"],
     answer: "Pokemon"
+  },
+  {
+    question: "?",
+    options: ["Naruto", "Dragon Ball", "Pokemon", "One Piece"],
+    answer: "Pokemon"
+  },
+  {
+    question: "Qual o estilo musical tradicional do Japão?",
+    options: ["J-POP", "Rock", "Salsa", "Enka"],
+    answer: "Enka"
   }
 ];

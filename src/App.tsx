@@ -42,7 +42,7 @@ const App: React.FC = () => {
       <AboutCourse />
       <LessonList />
 
-      <div style={{ padding: '2rem' }}>
+      <div  id="Licoes" style={{ padding: '2rem' }}>
         <h1>Quiz de Cultura Japonesa 🇯🇵</h1>
         <Question
           question={questions[currentIndex].question}
