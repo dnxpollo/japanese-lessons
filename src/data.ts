@@ -9,7 +9,7 @@ export const questions: QuestionData[] = [
   {
     question: "Qual a capital do Japão?",
     options: ["Osaka", "Toyama", "Tokyo", "Hiroshima"],
-    answer: "Tokio"
+    answer: "Toko"
   },
   {
     question: "Como falar 'eu te amo' em japonês?",
@@ -32,9 +32,9 @@ export const questions: QuestionData[] = [
     answer: "Pokemon"
   },
   {
-    question: "?",
-    options: ["Naruto", "Dragon Ball", "Pokemon", "One Piece"],
-    answer: "Pokemon"
+    question: "O que é o Matsuri?",
+    options: ["Fogo", "Comida tipica", "Festival", "Marca de roupas"],
+    answer: "Festival"
   },
   {
     question: "Qual o estilo musical tradicional do Japão?",

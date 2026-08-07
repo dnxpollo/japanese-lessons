@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <footer>
-      <p>© 2025 Aprenda Japonês. Todos os direitos reservados.</p>
+      <p>© 2026 Aprenda Japonês. Todos os direitos reservados.</p>
     </footer>
   );
 }
