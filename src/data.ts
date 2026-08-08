@@ -9,7 +9,7 @@ export const questions: QuestionData[] = [
   {
     question: "Qual a capital do Japão?",
     options: ["Osaka", "Toyama", "Tokyo", "Hiroshima"],
-    answer: "Toko"
+    answer: "Tokyo"
   },
   {
     question: "Como falar 'eu te amo' em japonês?",
