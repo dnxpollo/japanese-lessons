@@ -60,13 +60,25 @@ const App: React.FC = () => {
       <AboutCourse />
       <LessonList />
 
-      <div  id="Licoes" style={{ padding: '2rem' }}>
+      <div id="Licoes" style={{ padding: '2rem' }}>
         <h1>Quiz de Cultura Japonesa 🇯🇵</h1>
-        <Question
-          question={questions[currentIndex].question}
-          options={questions[currentIndex].options}
-          onAnswer={handleAnswer}
-        />
+        {quizFinished ? (
+          <div>
+            <p>Quiz concluído! Resultado salvo no seu histórico de hoje.</p>
+            <button onClick={restartAttempt}>Jogar novamente</button>
+          </div>
+        ) : (
+          <>
+            <Question
+              question={questions[currentIndex].question}
+              options={questions[currentIndex].options}
+              onAnswer={handleAnswer}
+            />
+            <button onClick={restartAttempt} style={{ marginTop: '1rem' }}>
+              Recomeçar tentativa
+            </button>
+          </>
+        )}
       </div>
 
       <Footer />
