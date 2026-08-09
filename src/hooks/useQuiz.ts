@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { questions } from '../data';
 import useLocalStorage from './useLocalStorage';
 
-interface DayRecord {
+export interface DayRecord {
   date: string;
   score: number;
   total: number;

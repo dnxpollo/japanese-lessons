@@ -1,5 +1,6 @@
 import React from 'react';
 import  { useQuiz } from './hooks/useQuiz';
+import QuizHistory from './QuizHistory';
 import Header from './Header';
 import HeroSection from './HeroSection';
 import LessonList from './LessonList';
@@ -10,7 +11,7 @@ import './App.css';
 
 
 const App: React.FC = () => {
-  const { currentQuestion, handleAnswer, quizFinished, restartAttempt } = useQuiz();
+  const { currentQuestion, handleAnswer,history, quizFinished, restartAttempt } = useQuiz();
 
   return (
     <div className="App">
@@ -38,6 +39,8 @@ const App: React.FC = () => {
             </button>
           </>
         )}
+        <h2>Seu Histórico</h2>
+        <QuizHistory history={history} />
       </div>
 
       <Footer />
