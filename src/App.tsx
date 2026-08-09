@@ -11,7 +11,7 @@ import './App.css';
 
 
 const App: React.FC = () => {
-  const { currentQuestion, handleAnswer,history, quizFinished, restartAttempt } = useQuiz();
+  const { currentQuestion, handleAnswer, history, streak, quizFinished, restartAttempt } = useQuiz();
 
   return (
     <div className="App">
@@ -40,6 +40,7 @@ const App: React.FC = () => {
           </>
         )}
         <h2>Seu Histórico</h2>
+        <p>Sequência atual: {streak} {streak === 1 ? 'dia' : 'dias'}</p>
         <QuizHistory history={history} />
       </div>
 

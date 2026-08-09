@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { questions } from '../data';
 import useLocalStorage from './useLocalStorage';
+import { calculateStreak } from './streak';
 
 export interface DayRecord {
   date: string;
@@ -12,6 +13,7 @@ export function useQuiz() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [history, setHistory] = useLocalStorage<DayRecord[]>('quizHistory', []);
+  const streak = calculateStreak(history);
 
   const quizFinished = currentIndex >= questions.length;
   const currentQuestion = questions[currentIndex];
@@ -52,6 +54,7 @@ export function useQuiz() {
     quizFinished,
     score,
     history,
+    streak,
     handleAnswer,
     restartAttempt,
   };
