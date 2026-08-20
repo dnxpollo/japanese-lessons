@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import  { useQuiz } from './hooks/useQuiz';
+import { useToasts } from './hooks/useToasts';
 import QuizHistory from './QuizHistory';
+import ToastContainer from './ToastContainer';
 import Header from './Header';
 import HeroSection from './HeroSection';
 import LessonList from './LessonList';
@@ -12,6 +14,13 @@ import './App.css';
 
 const App: React.FC = () => {
   const { currentQuestion, handleAnswer, history, streak, quizFinished, restartAttempt } = useQuiz();
+  const { toasts, addToast } = useToasts();
+      
+  useEffect(() => {
+    if(quizFinished) {
+      addToast('Quiz concluido! Seu resultado foi salvo!');
+    }
+  }, [quizFinished]);
 
   return (
     <div className="App">
@@ -45,6 +54,7 @@ const App: React.FC = () => {
       </div>
 
       <Footer />
+      <ToastContainer toasts={toasts} />
     </div>
   );
 };
